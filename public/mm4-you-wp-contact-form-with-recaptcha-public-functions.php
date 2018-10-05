@@ -7,18 +7,15 @@ function mm4_you_contact_form() {
 	wp_enqueue_script( 'mm4-recaptcha', '//www.google.com/recaptcha/api.js', NULL, NULL, TRUE );
 	wp_enqueue_script('mm4-you-validate', plugin_dir_url( dirname(__FILE__) ) . 'public/js/min/mm4-you-validate-min.js', NULL, NULL, TRUE ); ?>
 
-	<form name="mm4-contact-form" id="mm4-contact-form" method="POST" action="<?php echo get_permalink($options['thank_you_page_id']); ?>" novalidate>
-		<label for="first-name">
-			<input type="text" name="first-name" id="first-name" class="required" data-error-label="Name" placeholder="NAME">
+	<form name="mm4-contact-form" id="contact-form" method="POST" action="<?php echo get_permalink($options['thank_you_page_id']); ?>" novalidate>
+		<label for="first-name">Your Name*
+			<input type="text" name="first-name" id="first-name" class="required" data-error-label="Name">
 		</label>
-		<label for="email-address">
-			<input type="email" name="email-address" id="email-address" class="required" data-error-label="Email" placeholder="EMAIL">
+		<label for="email-address">Your Email Address*
+			<input type="email" name="email-address" id="email-address" class="required" data-error-label="Email">
 		</label>
-		<label for="primary-phone">
-			<input type="tel" name="primary-phone" id="primary-phone" class="required" data-error-label="Phone" placeholder="PHONE">
-		</label>
-		<label for="message">
-			<textarea name="message" id="message" rows="6" placeholder="MESSAGE"></textarea>
+		<label for="message">Let Us Know What's Up
+			<textarea name="message" id="message" rows="6"></textarea>
 		</label>
 		<div class="g-recaptcha" data-sitekey="<?php echo $options['recaptcha_public_key']; ?>"></div>
 		<div class="msg-box"></div>

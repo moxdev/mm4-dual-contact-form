@@ -7,7 +7,7 @@ $pages = array(
 		'parent_slug' => 'options-general.php',
 		'sections'		=> array(
 			'section-one' => array(
-				'title'			=> __( 'Delivery Settings', 'mm4-you-wp-contact-form-with-recaptcha' ),
+				'title'			=> __( 'Contact Form Delivery Settings', 'mm4-you-wp-contact-form-with-recaptcha' ),
 				'fields' => array(
 					'email-to'			=> array(
 						'title'			=> __( 'To Address', 'mm4-you-wp-contact-form-with-recaptcha' ),
@@ -22,7 +22,7 @@ $pages = array(
 				),
 			),
 			'section-two' => array(
-				'title'			=> __( 'Sender Settings', 'mm4-you-wp-contact-form-with-recaptcha' ),
+				'title'			=> __( 'Contact Form Sender Settings', 'mm4-you-wp-contact-form-with-recaptcha' ),
 				'fields' => array(
 					'email-from'			=> array(
 						'title'			=> __( 'From Address', 'mm4-you-wp-contact-form-with-recaptcha' ),
@@ -37,6 +37,36 @@ $pages = array(
 				),
 			),
 			'section-three' => array(
+				'title'			=> __( 'PBC Registration Form Delivery Settings', 'mm4-you-wp-contact-form-with-recaptcha' ),
+				'fields' => array(
+					'email-to'			=> array(
+						'title'			=> __( 'To Address', 'mm4-you-wp-contact-form-with-recaptcha' ),
+						'type'			=> 'text',
+						'text' => 'Email address(es) form submission is emailed to. Separate multiple email addresses with a comma.'
+					),
+					'subject'			=> array(
+						'title'			=> __( 'Subject Line', 'mm4-you-wp-contact-form-with-recaptcha' ),
+						'type'			=> 'text',
+						'text' => 'Subject line for form submission email.'
+					),
+				),
+			),
+			'section-four' => array(
+				'title'			=> __( 'PBC Registration Form Sender Settings', 'mm4-you-wp-contact-form-with-recaptcha' ),
+				'fields' => array(
+					'email-from'			=> array(
+						'title'			=> __( 'From Address', 'mm4-you-wp-contact-form-with-recaptcha' ),
+						'type'			=> 'text',
+						'text' => 'Email address that the form submission should come from.'
+					),
+					'name-from'			=> array(
+						'title'			=> __( 'From Name', 'mm4-you-wp-contact-form-with-recaptcha' ),
+						'type'			=> 'text',
+						'text' => 'Name that the form submission should come from.'
+					),
+				),
+			),
+			'section-five' => array(
 				'title'			=> __( 'WordPress Settings', 'mm4-you-wp-contact-form-with-recaptcha' ),
 				'fields' => array(
 					'thank-you-id'			=> array(
@@ -44,9 +74,14 @@ $pages = array(
 						'type'			=> 'text',
 						'text' => 'Enter the page ID of the contact form "Thank You" page.'
 					),
+					'pbc-registration-thank-you-id'			=> array(
+						'title'			=> __( 'PBC Registration Thank You page ID', 'mm4-you-wp-contact-form-with-recaptcha' ),
+						'type'			=> 'text',
+						'text' => 'Enter the page ID of the PBC registration form "Thank You" page.'
+					),
 				),
 			),
-			'section-four' => array(
+			'section-six' => array(
 				'title'			=> __( 'ReCAPTCHA Settings', 'mm4-you-wp-contact-form-with-recaptcha' ),
 				'fields' => array(
 					'public-key'			=> array(
