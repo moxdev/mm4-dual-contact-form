@@ -40,12 +40,12 @@ $pages = array(
 				'title'			=> __( 'PBC Registration Form Delivery Settings', 'mm4-you-wp-contact-form-with-recaptcha' ),
 				'fields' => array(
 					'email-to'			=> array(
-						'title'			=> __( 'To Address', 'mm4-you-wp-contact-form-with-recaptcha' ),
+						'title'			=> __( 'Registration To Address', 'mm4-you-wp-contact-form-with-recaptcha' ),
 						'type'			=> 'text',
 						'text' => 'Email address(es) form submission is emailed to. Separate multiple email addresses with a comma.'
 					),
 					'subject'			=> array(
-						'title'			=> __( 'Subject Line', 'mm4-you-wp-contact-form-with-recaptcha' ),
+						'title'			=> __( 'Registration Subject Line', 'mm4-you-wp-contact-form-with-recaptcha' ),
 						'type'			=> 'text',
 						'text' => 'Subject line for form submission email.'
 					),
@@ -55,12 +55,12 @@ $pages = array(
 				'title'			=> __( 'PBC Registration Form Sender Settings', 'mm4-you-wp-contact-form-with-recaptcha' ),
 				'fields' => array(
 					'email-from'			=> array(
-						'title'			=> __( 'From Address', 'mm4-you-wp-contact-form-with-recaptcha' ),
+						'title'			=> __( 'Registration From Address', 'mm4-you-wp-contact-form-with-recaptcha' ),
 						'type'			=> 'text',
 						'text' => 'Email address that the form submission should come from.'
 					),
 					'name-from'			=> array(
-						'title'			=> __( 'From Name', 'mm4-you-wp-contact-form-with-recaptcha' ),
+						'title'			=> __( 'Registration From Name', 'mm4-you-wp-contact-form-with-recaptcha' ),
 						'type'			=> 'text',
 						'text' => 'Name that the form submission should come from.'
 					),
@@ -75,7 +75,7 @@ $pages = array(
 						'text' => 'Enter the page ID of the contact form "Thank You" page.'
 					),
 					'pbc-registration-thank-you-id'			=> array(
-						'title'			=> __( 'PBC Registration Thank You page ID', 'mm4-you-wp-contact-form-with-recaptcha' ),
+						'title'			=> __( 'Registration Thank You page ID', 'mm4-you-wp-contact-form-with-recaptcha' ),
 						'type'			=> 'text',
 						'text' => 'Enter the page ID of the PBC registration form "Thank You" page.'
 					),
@@ -98,3 +98,7 @@ $pages = array(
 	),
 );
 $option_page = new MM4YouContactOptionsPage( $pages );
+
+// $options = get_option( 'mm4-you-wp-contact-form-with-recaptcha-options', array() ); ?>
+ <!-- <pre style="margin-left:30em;"><?php //print_r($options); ?></pre> -->
+
