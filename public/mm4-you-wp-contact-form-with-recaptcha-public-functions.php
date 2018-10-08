@@ -50,8 +50,7 @@ function pbc_registration_form() {
 		</label>
 		<label for="not-reseller">
 			<input type="checkbox" id="not-reseller" name="not-reseller"
-			value="not-reseller" />I agree I am not a reseller
-		</label>
+			value="not-reseller" class="required" data-error-label="I agree I am not a reseller" />I agree I am not a reseller</label>
 
 		<div class="g-recaptcha" data-sitekey="<?php echo $options['recaptcha_public_key']; ?>"></div>
 		<div class="msg-box"></div>
