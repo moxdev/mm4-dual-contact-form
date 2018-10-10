@@ -99,6 +99,3 @@ $pages = array(
 );
 $option_page = new MM4YouContactOptionsPage( $pages );
 
-// $options = get_option( 'mm4-you-wp-contact-form-with-recaptcha-options', array() ); ?>
- <!-- <pre style="margin-left:30em;"><?php //print_r($options); ?></pre> -->
-
