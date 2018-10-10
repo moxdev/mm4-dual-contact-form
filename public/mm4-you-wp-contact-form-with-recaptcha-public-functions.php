@@ -45,12 +45,17 @@ function pbc_registration_form() {
 		<label for="primary-phone">Your Phone Number
 			<input type="tel" name="primary-phone" id="primary-phone" data-error-label="Phone">
 		</label>
-		<label for="message">What Should Go Here?
-			<textarea name="message" id="message" rows="6"></textarea>
+		<label for="primary-phone">Which Plan Would You Like?*
+			<select name="plan-select" id="plan-select" class="required" data-error-label="Which Plan Would You Like?">
+				<option value=''></option>
+				<option value='6'>6 Months</option>
+				<option value='12'>12 Months</option>
+			</select>
 		</label>
 		<label for="not-reseller">
 			<input type="checkbox" id="not-reseller" name="not-reseller"
-			value="not-reseller" class="required" data-error-label="I agree I am not a reseller" />I agree I am not a reseller</label>
+			value="not-reseller" class="required" data-error-label="I agree I am not a reseller" />I agree I am not a reseller*
+		</label>
 
 		<div class="g-recaptcha" data-sitekey="<?php echo $options['recaptcha_public_key']; ?>"></div>
 		<div class="msg-box"></div>

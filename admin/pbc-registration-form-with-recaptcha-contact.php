@@ -13,7 +13,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
 	$name = stripslashes_deep(sanitize_text_field($_POST["full-name"]));
 	$email= stripslashes_deep(sanitize_email($_POST["email-address"]));
 	$phone = stripslashes_deep(sanitize_text_field($_POST["primary-phone"]));
-	$message = stripslashes_deep(wpautop(esc_textarea($_POST["message"])));
+	$plan = stripslashes_deep(($_POST["plan-select"]));
 
 	if(!$captcha){
 		output_error( 'Please go back and check the spam protection checkbox.' );
@@ -31,12 +31,11 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
 			</head>
 			<body>
 				<div style='background-color: #f7f7f7; font-family: sans-serif; padding: 20px;'>
-					<h3>You have received a form submission:</h3>
+					<h3>Join Promobox form submission:</h3>
 					<em>Name:</em> $name<br>
 					<em>Email:</em> $email<br>
 					<em>Phone:</em> $phone<br>
-					<br>
-					$message
+					<em>Subscription Plan:</em> $plan Months<br>
 				</div>
 			</body>
 		</html>
