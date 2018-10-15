@@ -30,7 +30,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
 			</head>
 			<body>
 				<div style='background-color: #f7f7f7; font-family: sans-serif; padding: 20px;'>
-					<h3>Promobox Contact form submission:</h3>
+					<h3>Promobox Contact Form Submission:</h3>
 					<em>Name:</em> $name<br>
 					<em>Email:</em> $email<br>
 					<br>

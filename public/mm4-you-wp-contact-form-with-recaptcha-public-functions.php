@@ -36,25 +36,50 @@ function pbc_registration_form() {
 	wp_enqueue_script('mm4-you-validate', plugin_dir_url( dirname(__FILE__) ) . 'public/js/min/mm4-you-validate-min.js', NULL, NULL, TRUE ); ?>
 
 	<form name="mm4-contact-form" class="contact-form" id="mm4-contact-form" method="POST" action="<?php echo get_permalink($options['registration_thank_you_page_id']); ?>" novalidate>
-		<label for="full-name">Your Name*
-			<input type="text" name="full-name" id="full-name" class="required" data-error-label="Your Name">
+		<label for="company">Company Name*
+			<input type="text" name="company" id="company" class="required" data-error-label="Company Name">
+		</label>
+		<label for="first-name">First Name*
+			<input type="text" name="first-name" id="first-name" class="required" data-error-label="First Name">
+		</label>
+		<label for="last-name">Last Name*
+			<input type="text" name="last-name" id="last-name" class="required" data-error-label="Last Name">
+		</label>
+		<label for="title">Your Title*
+			<input type="text" name="title" id="title" class="required" data-error-label="Your Title">
+		</label>
+		<label for="address">Company Address*
+			<input type="text" name="address" id="address" class="required" data-error-label="Company Address">
+		</label>
+		<label for="city">City*
+			<input type="text" name="city" id="city" class="required" data-error-label="City">
+		</label>
+		<label for="state">State*
+			<input type="text" name="state" id="state" class="required" data-error-label="State">
+		</label>
+		<label for="zip">Zip Code*
+			<input type="text" name="zip" id="zip" class="required" data-error-label="Zip Code">
 		</label>
 		<label for="email-address">Your Email Address*
 			<input type="email" name="email-address" id="email-address" class="required" data-error-label="Your Email Address">
 		</label>
-		<label for="primary-phone">Your Phone Number
-			<input type="tel" name="primary-phone" id="primary-phone" data-error-label="Phone">
+		<label for="phone">Company Phone Number
+			<input type="tel" name="phone" id="phone" data-error-label="Company Phone Number">
 		</label>
-		<label for="primary-phone">Which Plan Would You Like?*
+		<label for="plan-label">Which Plan Would You Like?*
 			<select name="plan-select" id="plan-select" class="required" data-error-label="Which Plan Would You Like?">
 				<option value=''></option>
-				<option value='6'>6 Months</option>
-				<option value='12'>12 Months</option>
+				<option value='6'>6 Months &dash; $129</option>
+				<option value='12'>12 Months &dash; $159</option>
 			</select>
 		</label>
-		<label for="not-reseller">
-			<input type="checkbox" id="not-reseller" name="not-reseller"
-			value="not-reseller" class="required" data-error-label="I agree I am not a reseller" />I agree I am not a reseller*
+		<label for="end-user">
+			<input type="checkbox" id="end-user" name="end-user"
+			value="end-user" class="required" data-error-label="I am an end user of promotional products and use them to brand and market my company" /> I am an end user of promotional products and use them to brand and market my company*
+		</label>
+		<label for="promo-distributor">
+			<input type="checkbox" id="promo-distributor" name="promo-distributor"
+			value="promo-distributor" class="required" data-error-label="I am a promotional product distributor" /> I am a promotional product distributor*
 		</label>
 
 		<div class="g-recaptcha" data-sitekey="<?php echo $options['recaptcha_public_key']; ?>"></div>

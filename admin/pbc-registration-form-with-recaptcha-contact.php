@@ -10,9 +10,16 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
 	$secret_key = $options['recaptcha_private_key'];
 	$captcha = $_POST['g-recaptcha-response'];
 
-	$name = stripslashes_deep(sanitize_text_field($_POST["full-name"]));
+	$company = stripslashes_deep(sanitize_text_field($_POST["company"]));
+	$first_name = stripslashes_deep(sanitize_text_field($_POST["first-name"]));
+	$last_name = stripslashes_deep(sanitize_text_field($_POST["last-name"]));
+	$title = stripslashes_deep(sanitize_text_field($_POST["title"]));
+	$address = stripslashes_deep(sanitize_text_field($_POST["address"]));
+	$city = stripslashes_deep(sanitize_text_field($_POST["city"]));
+	$state = stripslashes_deep(sanitize_text_field($_POST["state"]));
+	$zip = stripslashes_deep(sanitize_text_field($_POST["zip"]));
 	$email= stripslashes_deep(sanitize_email($_POST["email-address"]));
-	$phone = stripslashes_deep(sanitize_text_field($_POST["primary-phone"]));
+	$phone = stripslashes_deep(sanitize_text_field($_POST["phone"]));
 	$plan = stripslashes_deep(($_POST["plan-select"]));
 
 	if(!$captcha){
@@ -31,10 +38,17 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
 			</head>
 			<body>
 				<div style='background-color: #f7f7f7; font-family: sans-serif; padding: 20px;'>
-					<h3>Join Promobox form submission:</h3>
-					<em>Name:</em> $name<br>
-					<em>Email:</em> $email<br>
-					<em>Phone:</em> $phone<br>
+					<h3>Join Promobox Form Submission:</h3>
+					<em>Company Name:</em> $company<br>
+					<em>First Name:</em> $first_name<br>
+					<em>Last Name:</em> $last_name<br>
+					<em>Title:</em> $title<br>
+					<em>Company Address:</em> $address<br>
+					<em>City:</em> $city<br>
+					<em>State:</em> $state<br>
+					<em>Zip Code:</em> $zip<br>
+					<em>Your Email:</em> $email<br>
+					<em>Company Phone Number:</em> $phone<br>
 					<em>Subscription Plan:</em> $plan Months<br>
 				</div>
 			</body>
