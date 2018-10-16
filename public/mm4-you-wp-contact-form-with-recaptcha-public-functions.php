@@ -63,7 +63,7 @@ function pbc_registration_form() {
 		<label for="email-address">Your Email Address*
 			<input type="email" name="email-address" id="email-address" class="required" data-error-label="Your Email Address">
 		</label>
-		<label for="phone">Company Phone Number
+		<label for="phone">Company Phone Number*
 			<input type="tel" name="phone" id="phone" data-error-label="Company Phone Number">
 		</label>
 		<label for="plan-label">Which Plan Would You Like?*
@@ -73,14 +73,18 @@ function pbc_registration_form() {
 				<option value='12'>12 Months &dash; $159</option>
 			</select>
 		</label>
-		<label for="end-user">
-			<input type="checkbox" id="end-user" name="end-user"
-			value="end-user" class="required" data-error-label="I am an end user of promotional products and use them to brand and market my company" /> I am an end user of promotional products and use them to brand and market my company*
-		</label>
-		<label for="promo-distributor">
-			<input type="checkbox" id="promo-distributor" name="promo-distributor"
-			value="promo-distributor" class="required" data-error-label="I am a promotional product distributor" /> I am a promotional product distributor*
-		</label>
+
+		<fieldset>
+			<legend>Please choose of the following:*</legend>
+			<label for="end-user">
+				<input type="checkbox" id="end-user" name="check_list[]"
+			value="end-user" class="required" data-error-label="Checkbox" /> I am an end user of promotional products and use them to brand and market my company
+			</label>
+			<label for="promo-distributor">
+				<input type="checkbox" id="promo-distributor" name="check_list[]"
+			value="promo-distributor" class="required" data-error-label="Checkbox" /> I am a promotional product distributor
+			</label>
+		</fieldset>
 
 		<div class="g-recaptcha" data-sitekey="<?php echo $options['recaptcha_public_key']; ?>"></div>
 		<div class="msg-box"></div>

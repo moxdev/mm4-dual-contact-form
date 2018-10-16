@@ -21,6 +21,8 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
 	$email= stripslashes_deep(sanitize_email($_POST["email-address"]));
 	$phone = stripslashes_deep(sanitize_text_field($_POST["phone"]));
 	$plan = stripslashes_deep(($_POST["plan-select"]));
+	$checkboxs = esc_html(trim(implode(', ', $_POST['check_list']))) ;
+
 
 	if(!$captcha){
 		output_error( 'Please go back and check the spam protection checkbox.' );
@@ -38,7 +40,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
 			</head>
 			<body>
 				<div style='background-color: #f7f7f7; font-family: sans-serif; padding: 20px;'>
-					<h3>Join Promobox Form Submission:</h3>
+					<h3>Join PromoBox Form Submission:</h3>
 					<em>Company Name:</em> $company<br>
 					<em>First Name:</em> $first_name<br>
 					<em>Last Name:</em> $last_name<br>
@@ -50,6 +52,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
 					<em>Your Email:</em> $email<br>
 					<em>Company Phone Number:</em> $phone<br>
 					<em>Subscription Plan:</em> $plan Months<br>
+					<em>I am a:</em> $checkboxs<br>
 				</div>
 			</body>
 		</html>
